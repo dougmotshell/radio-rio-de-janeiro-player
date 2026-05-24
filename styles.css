@@ -96,6 +96,11 @@ body {
     width: auto;
     height: auto;
     display: block;
+    opacity: 0.5;
+}
+
+.redes img:hover {
+    opacity: 1;
 }
 
 .eyebrow {
