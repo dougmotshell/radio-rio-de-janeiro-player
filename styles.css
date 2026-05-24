@@ -37,8 +37,8 @@ body {
     display: grid;
     grid-template-columns: minmax(220px, 290px) 1fr auto;
     align-items: center;
-    gap: clamp(20px, 3.4vw, 38px);
-    padding: clamp(18px, 3.2vw, 38px);
+    gap: clamp(32px, 6.4vw, 64px);
+    padding: clamp(32px, 6.4vw, 64px);
     border-radius: 28px;
     background: var(--card-bg);
     border: 1px solid var(--card-border);
@@ -243,7 +243,17 @@ h1 {
     }
 
     .redes {
-        justify-self: end;
+        justify-self: stretch;
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .redes a {
+        width: 44px;
+        height: 44px;
     }
 }
 
