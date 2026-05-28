@@ -6,7 +6,6 @@
     --text-main: #103762;
     --text-soft: #577399;
     --blue-400: #4a93f2;
-    --blue-500: #2c7ae4;
     --blue-600: #1f67cc;
     --shadow-soft: 0 18px 55px rgba(37, 93, 168, 0.2);
 }
@@ -31,6 +30,27 @@ body {
 
 .app {
     width: min(980px, 100%);
+}
+
+.page-nav {
+    margin-bottom: 14px;
+    display: inline-flex;
+    gap: 10px;
+}
+
+.page-nav a {
+    border-radius: 999px;
+    padding: 8px 14px;
+    text-decoration: none;
+    color: #1f67cc;
+    font-weight: 700;
+    font-size: 0.92rem;
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid rgba(102, 160, 235, 0.32);
+}
+
+.page-nav a:hover {
+    background: rgba(255, 255, 255, 0.95);
 }
 
 .player-card {
@@ -96,7 +116,7 @@ body {
     width: auto;
     height: auto;
     display: block;
-    opacity: 0.5;
+    opacity: 0.55;
 }
 
 .redes img:hover {

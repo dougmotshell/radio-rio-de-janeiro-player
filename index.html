@@ -3,62 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sétimo Céu Rádio</title>
+    <title>Rádio Rio de Janeiro</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Sora:wght@500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/index.css">
 </head>
 <body>
-    <main class="app">
-        <section class="player-card" aria-label="Player de rádio online">
-            <figure class="cover-wrap">
-                <img class="cover-image" src="radio-rio-de-janeiro-1.jpg" alt="Imagem da rádio Sétimo Céu">
+    <main class="home">
+        <section class="home-card" aria-label="Escolha como acompanhar a Rádio Rio de Janeiro">
+            <figure class="hero-cover">
+                <img src="assets/images/radio-rio-de-janeiro-1.jpg" alt="Imagem da Rádio Rio de Janeiro">
             </figure>
 
-            <div class="player-body">
-                <p class="eyebrow">Rádio online</p>
-                <h1>Rádio Rio de Janeiro</h1>
+            <div class="hero-content">
+                <p class="eyebrow">Rádio Rio de Janeiro</p>
+                <h1>Escolha como acompanhar a programação</h1>
+                <p class="lead">Entre no áudio ao vivo ou assista à transmissão em vídeo com um clique.</p>
 
-                <p class="status" id="status">
-                    <span class="status-dot" aria-hidden="true"></span>
-                    <span id="statusLabel">Ao vivo • toque para ouvir</span>
-                </p>
+                <nav class="mode-nav" aria-label="Navegação para áudio e vídeo">
+                    <a class="mode-link mode-link-audio" href="pages/audio.html" aria-label="Ouvir transmissão de áudio">
+                        <span class="icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 5L6 9H3v6h3l5 4V5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                                <path d="M15.5 8.5a5 5 0 010 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                                <path d="M18.5 6a9 9 0 010 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                            </svg>
+                        </span>
+                        <span>Ouça</span>
+                    </a>
 
-                <div class="player-controls">
-                    <button id="playBtn" type="button" aria-label="Reproduzir rádio">▶</button>
+                    <a class="mode-link mode-link-video" href="pages/video.html" aria-label="Assistir transmissão em vídeo">
+                        <span class="icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="3" y="6" width="14" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+                                <polygon points="9,10 14,12 9,14" fill="currentColor"/>
+                                <path d="M17 10l4-2v8l-4-2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        <span>Assista</span>
+                    </a>
+                </nav>
 
-                    <div class="sound-wave" aria-hidden="true">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
+                <div class="redes" aria-label="Redes sociais da Rádio Rio de Janeiro">
+                    <a href="https://www.facebook.com/R%C3%A1dio-Rio-de-Janeiro-1692901484264506/" title="Curta nossa página no Facebook" target="_blank" rel="noopener noreferrer">
+                        <img src="https://s.magecdn.com/social/tc-facebook.svg" width="44" height="42" alt="Curta nossa página no Facebook">
+                    </a>
+                    <a href="https://www.youtube.com/user/radioriodejaneiro" title="Siga nosso canal no YouTube" target="_blank" rel="noopener noreferrer">
+                        <img src="https://s.magecdn.com/social/tc-youtube.svg" width="44" height="42" alt="Siga nosso canal no YouTube">
+                    </a>
+                    <a href="https://twitter.com/Radio_RJ_1400am" title="Twitter" target="_blank" rel="noopener noreferrer">
+                        <img src="https://s.magecdn.com/social/tc-x.svg" width="42" height="42" alt="Twitter">
+                    </a>
+                    <a href="https://www.instagram.com/radioriodejaneiro1400am/" title="Instagram" target="_blank" rel="noopener noreferrer">
+                        <img src="https://s.magecdn.com/social/tc-instagram.svg" width="42" height="43" alt="Instagram">
+                    </a>
                 </div>
             </div>
-
-            <div class="redes" aria-label="Redes sociais da rádio Rio de Janeiro">
-                <a href="https://www.facebook.com/R%C3%A1dio-Rio-de-Janeiro-1692901484264506/" title="Curta nossa página no Facebook" target="_blank" rel="noopener noreferrer">
-                    <img src="https://s.magecdn.com/social/tc-facebook.svg" width="44" height="42" alt="Curta nossa página no Facebook">
-                </a>
-                <a href="https://www.youtube.com/user/radioriodejaneiro" title="Siga nosso canal no YouTube" target="_blank" rel="noopener noreferrer">
-                    <img src="https://s.magecdn.com/social/tc-youtube.svg" width="44" height="42" alt="Siga nosso canal no YouTube">
-                </a>
-                <a href="https://twitter.com/Radio_RJ_1400am" title="Twitter" class="bt-Twitter" target="_blank" rel="noopener noreferrer">
-                    <img src="https://s.magecdn.com/social/tc-x.svg" width="42" height="42" alt="Twitter">
-                </a>
-                <a href="https://www.instagram.com/radioriodejaneiro1400am/" title="Instagram" class="bt-instagram" target="_blank" rel="noopener noreferrer">
-                    <img src="https://s.magecdn.com/social/tc-instagram.svg" width="42" height="43" alt="Instagram">
-                </a>
-            </div>
-
-            <audio id="audio">
-                <source src="https://sc4s.cdn.upx.com:8258/stream" type="audio/mpeg">
-            </audio>
         </section>
     </main>
 
-    <script src="index.js"></script>
+    <script src="assets/js/index.js"></script>
 </body>
 </html>

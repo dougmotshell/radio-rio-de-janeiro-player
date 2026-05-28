@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rádio Rio de Janeiro | Ouça</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Sora:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/audio.css">
+</head>
+<body>
+    <main class="app">
+        <nav class="page-nav" aria-label="Navegação principal">
+            <a href="../index.html">Início</a>
+            <a href="video.html">Assista</a>
+        </nav>
+
+        <section class="player-card" aria-label="Player de rádio online">
+            <figure class="cover-wrap">
+                <img class="cover-image" src="../assets/images/radio-rio-de-janeiro-1.jpg" alt="Imagem da Rádio Rio de Janeiro">
+            </figure>
+
+            <div class="player-body">
+                <p class="eyebrow">Rádio online</p>
+                <h1>Rádio Rio de Janeiro</h1>
+
+                <p class="status" id="status">
+                    <span class="status-dot" aria-hidden="true"></span>
+                    <span id="statusLabel">Ao vivo • toque para ouvir</span>
+                </p>
+
+                <div class="player-controls">
+                    <button id="playBtn" type="button" aria-label="Reproduzir rádio">▶</button>
+
+                    <div class="sound-wave" aria-hidden="true">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="redes" aria-label="Redes sociais da Rádio Rio de Janeiro">
+                <a href="https://www.facebook.com/R%C3%A1dio-Rio-de-Janeiro-1692901484264506/" title="Curta nossa página no Facebook" target="_blank" rel="noopener noreferrer">
+                    <img src="https://s.magecdn.com/social/tc-facebook.svg" width="44" height="42" alt="Curta nossa página no Facebook">
+                </a>
+                <a href="https://www.youtube.com/user/radioriodejaneiro" title="Siga nosso canal no YouTube" target="_blank" rel="noopener noreferrer">
+                    <img src="https://s.magecdn.com/social/tc-youtube.svg" width="44" height="42" alt="Siga nosso canal no YouTube">
+                </a>
+                <a href="https://twitter.com/Radio_RJ_1400am" title="Twitter" target="_blank" rel="noopener noreferrer">
+                    <img src="https://s.magecdn.com/social/tc-x.svg" width="42" height="42" alt="Twitter">
+                </a>
+                <a href="https://www.instagram.com/radioriodejaneiro1400am/" title="Instagram" target="_blank" rel="noopener noreferrer">
+                    <img src="https://s.magecdn.com/social/tc-instagram.svg" width="42" height="43" alt="Instagram">
+                </a>
+            </div>
+
+            <audio id="audio">
+                <source src="https://sc4s.cdn.upx.com:8258/stream" type="audio/mpeg">
+            </audio>
+        </section>
+    </main>
+
+    <script src="../assets/js/audio.js"></script>
+</body>
+</html>

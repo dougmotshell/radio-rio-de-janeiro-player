@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
             try {
                 await audio.play();
             } catch (error) {
+                statusLabel.textContent = "Nao foi possivel iniciar o audio";
                 setPlayingState(false);
             }
             return;
