@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const playBtn = document.getElementById("playBtn");
     const statusLabel = document.getElementById("statusLabel");
     const wave = document.querySelector(".sound-wave");
+    const volumeControl = document.getElementById("volumeControl");
+    const volumeValue = document.getElementById("volumeValue");
 
     if (!audio || !playBtn || !statusLabel || !wave) {
         return;
@@ -32,6 +34,25 @@ document.addEventListener("DOMContentLoaded", () => {
     audio.addEventListener("play", () => setPlayingState(true));
     audio.addEventListener("pause", () => setPlayingState(false));
     audio.addEventListener("ended", () => setPlayingState(false));
+
+    if (volumeControl) {
+        audio.volume = Number(volumeControl.value);
+
+        const syncVolumeUI = () => {
+            if (!volumeValue) {
+                return;
+            }
+
+            volumeValue.textContent = `${Math.round(audio.volume * 100)}%`;
+        };
+
+        volumeControl.addEventListener("input", () => {
+            audio.volume = Number(volumeControl.value);
+            syncVolumeUI();
+        });
+
+        syncVolumeUI();
+    }
 
     setPlayingState(false);
 });

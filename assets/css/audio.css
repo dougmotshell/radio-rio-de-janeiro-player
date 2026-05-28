@@ -174,6 +174,52 @@ h1 {
     gap: 18px;
 }
 
+.volume-control {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: auto minmax(140px, 1fr) auto;
+    align-items: center;
+    gap: 12px;
+    color: #335b8f;
+    font-weight: 700;
+}
+
+.volume-slider {
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #79b0fa, #4a93f2);
+    outline: none;
+}
+
+.volume-slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    background: #1f67cc;
+    box-shadow: 0 4px 10px rgba(31, 103, 204, 0.35);
+    cursor: pointer;
+}
+
+.volume-slider::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    background: #1f67cc;
+    box-shadow: 0 4px 10px rgba(31, 103, 204, 0.35);
+    cursor: pointer;
+}
+
+#volumeValue {
+    min-width: 40px;
+    text-align: right;
+    font-size: 0.92rem;
+}
+
 #playBtn {
     width: clamp(64px, 6.4vw, 82px);
     height: clamp(64px, 6.4vw, 82px);
@@ -265,6 +311,15 @@ h1 {
 
     .player-controls {
         justify-content: space-between;
+    }
+
+    .volume-control {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    #volumeValue {
+        text-align: left;
     }
 
     .redes {
